@@ -1,5 +1,5 @@
 # To specify that id is a primary key
-CREATE TABLE table_name (
+CREATE TABLE IF NOT EXISTS table_name (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, --specifies that it is a primary key
     column1 VARCHAR CHECK (column1 = 'f' OR column1 = 'm' OR column1 = 'd'), --check what can be entered in the data
     column2 datatype,
@@ -7,8 +7,12 @@ CREATE TABLE table_name (
 );
 
 # To automatically generate a primary key id
-CREATE TABLE table_name (
+CREATE TABLE IF NOT EXISTS table_name (
     id SERIAL PRIMARY KEY, --automatically generated
+    customer_id INTEGER,
+	CONSTRAINT con_observation
+		FOREIGN KEY (customer_id) 			--my variable name
+			REFERENCES customers(id), --table name(variable I refer to)
     column1 VARCHAR CHECK (column1 = 'f' OR column1 = 'm' OR column1 = 'd'), --check what can be entered in the data
     column2 datatype,
    ....
