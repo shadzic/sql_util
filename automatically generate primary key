@@ -1,3 +1,5 @@
+# https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-foreign-key/
+
 # To specify that id is a primary key
 CREATE TABLE IF NOT EXISTS table_name (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, --specifies that it is a primary key
