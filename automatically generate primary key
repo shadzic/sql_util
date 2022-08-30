@@ -1,0 +1,6 @@
+CREATE TABLE table_name (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, --automatically generated
+    column1 VARCHAR CHECK (column1 = 'f' OR column1 = 'm' OR column1 = 'd'), --check what can be entered in the data
+    column2 datatype,
+   ....
+);
