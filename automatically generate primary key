@@ -19,3 +19,8 @@ CREATE TABLE IF NOT EXISTS table_name (
     column2 datatype,
    ....
 );
+
+# inserting with DEFAULT for the automatically generated id
+INSERT INTO table_name VALUES (
+DEFAULT, ‘value1’,	‘value2’,	...,
+);
